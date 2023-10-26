@@ -313,3 +313,77 @@ of the array rather than counting it and hard coding it) - Thought question: did
 
 //=========================================================================================
 
+// Hungry for More?
+// Choose one that you didn't get to solve in lab
+
+
+// Return of the Closets
+// Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+    [
+        // These are Thom's shirts
+        "grey button-up",
+        "dark grey button-up",
+        "light blue button-up",
+        "blue button-up",
+    ], [
+        // These are Thom's pants
+        "grey jeans",
+        "jeans",
+        "PJs"
+    ], [
+        // Thom's accessories
+        "wool mittens",
+        "wool scarf",
+        "raybans"
+    ]
+];
+
+// Kristyn's left shoe has traveled through time and
+// space and turned up in Thom's accessories drawer! Remove Kristyn's
+// shoe from the array and save it to the variable kristynsShoe.
+// Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+let kristynsShoe = kristynsCloset.shift()
+// console.log(kristynsShoe)
+
+// thomsCloset.push(kristynsShoe)
+
+// thomsCloset[2][3] = kristynsShoe //- method 1
+thomsCloset[2].splice(3, 0, kristynsShoe)  //- method 2
+
+// console.log(thomsCloset)
+
+// Dress Us Up
+// Modify your code to put together 3 separate outfits for Kristyn and Thom.
+// Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+
+    // console.log(`Kristyn is wearing ${kristynsCloset[0]}, ${kristynsCloset[2]} and ${kristynsCloset[3]}.`)
+
+    // console.log(`Thom is wearing ${thomsCloset[0][2]}, ${thomsCloset[1][0]} and ${thomsCloset[2][2]}.`)
+
+    // Dirty Laundry
+    // Continue looking at the closet arrays:
+
+    // Time to do laundry - loop through Kristyn's closet and log the sentence
+    // "WHIRR: Now washing (item)" for each item in the array.
+
+    // for (let laundry of kristynsCloset) {
+    //     console.log(`WHIRR: Now washing ${laundry}`)
+    // }
+
+    // console.log(thomsCloset[0])
+    // console.log(thomsCloset[1])
+    // console.log(thomsCloset[2])
